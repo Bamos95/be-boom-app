@@ -1,0 +1,107 @@
+.alert {
+    width: 80%;
+    padding: 20px;
+    background-color: rgb(184, 8, 8);
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    animation: flash 1s infinite;
+    margin: 150px;
+  }
+
+ .video {
+    width: auto; /* Largeur automatique pour s'adapter au conteneur parent */
+    height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
+    max-width: 100%; /* Ne pas dépasser la largeur maximale du conteneur parent */
+    max-height: 100%; /* Ne pas dépasser la hauteur maximale du conteneur parent */
+  }
+  
+  @keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center; 
+} 
+
+
+.screen {
+    width: 100%;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden; /* Pour masquer le dépassement du contenu de la barre de progression */ 
+}
+
+.progress-bar {
+    /* position: relative;
+    height: 50%;
+    background-color: #ff0000;
+    width: 80%;
+    border-radius: 10px;  */
+
+    width: 100%; /* Vous pouvez ajuster cette valeur pour la progression souhaitée */
+    height: 100%;
+    background-color: red; /* Couleur de la progression */
+}
+
+
+
+
+
+  
+
+
+/* .screen {
+    position: relative;
+    width: 80%;
+    height: 100px; /
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+} */
+
+.progress-messages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Assure que les messages sont visibles au-dessus de la barre de progression */
+}
+
+.top-message, .bottom-message {
+    padding: 5px;
+}
+
+
+.top-message {
+    color: white; /* Couleur du texte en haut */
+    background-color: red; /* Couleur de fond en haut */
+}
+
+.bottom-message {
+    color: white; /* Couleur du texte en bas */
+    background-color: blue; /* Couleur de fond en bas */
+}
